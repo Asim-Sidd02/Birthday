@@ -38,7 +38,7 @@ export default function Wish() {
                     transition={{ delay: 0.5, duration: 0.8 }}
                     className="text-lg mb-4"
                 >
-                    💖🎈 May your day be filled with love, laughter, and all the happiness in the world! ✨ You've been my constant companion and confidante.
+                    💖🎈 May your day be filled with love, laughter, and all the happiness in the world! ✨ You&apos;ve been my constant companion and confidante.
                 </motion.p>
                 <motion.p
                     initial={{ opacity: 0 }}
@@ -46,7 +46,7 @@ export default function Wish() {
                     transition={{ delay: 1, duration: 0.8 }}
                     className="text-lg mb-4"
                 >
-                    Your strength inspires me, your laughter lifts me, and your love supports me. 💖🎈 I'm so grateful to have you as my sister.
+                    Your strength inspires me, your laughter lifts me, and your love supports me. 💖🎈 I&apos;m so grateful to have you as my sister.
                 </motion.p>
                 <motion.p
                     initial={{ opacity: 0 }}
