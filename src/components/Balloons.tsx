@@ -1,45 +1,67 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 
-const colors = ["#FF6B6B", "#4ECDC4", "#45B7D1", "#FFA07A", "#98D8C8"]
+const colors: string[] = ["#FF6B6B", "#4ECDC4", "#45B7D1", "#FFA07A", "#98D8C8"]
+
+// Define a type for a single balloon
+interface Balloon {
+  x: number
+  delay: number
+  duration: number
+  rotation: number
+  color1: string
+  color2: string
+}
 
 export default function Balloons() {
+  const [balloons, setBalloons] = useState<Balloon[]>([])
+
+  useEffect(() => {
+    setBalloons(
+      Array.from({ length: 15 }, () => ({
+        x: Math.random() * 100, // Use percentage to avoid SSR issues
+        delay: Math.random() * 5,
+        duration: Math.random() * 10 + 15,
+        rotation: Math.random() * 20 - 10,
+        color1: colors[Math.floor(Math.random() * colors.length)],
+        color2: colors[Math.floor(Math.random() * colors.length)],
+      }))
+    )
+  }, [])
+
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden">
-      {[...Array(15)].map((_, i) => (
+      {balloons.map((balloon, i) => (
         <motion.div
           key={i}
           className="absolute"
-          initial={{
-            x: Math.random() * window.innerWidth,
-            y: window.innerHeight + 100,
-          }}
+          initial={{ y: "110vh", x: `${balloon.x}vw` }}
           animate={{
-            y: -200,
-            x: `calc(${Math.random() * 100}vw - 50px)`,
+            y: "-10vh",
+            x: [`${balloon.x - 5}vw`, `${balloon.x + 5}vw`],
             transition: {
-              repeat: Infinity,
-              repeatType: "reverse",
-              duration: Math.random() * 10 + 20,
-              ease: "easeInOut",
+              y: { duration: balloon.duration, repeat: Infinity, ease: "easeOut" },
+              x: { duration: 4, repeat: Infinity, repeatType: "mirror", ease: "easeInOut" },
             },
           }}
         >
           <div
-            className="w-20 h-24 relative"
+            className="w-16 h-20 relative"
             style={{
-              background: `radial-gradient(circle at 30% 30%, ${colors[i % colors.length]}, ${
-                colors[(i + 1) % colors.length]
-              })`,
+              background: `radial-gradient(circle at 30% 30%, ${balloon.color1}, ${balloon.color2})`,
               borderRadius: "50% 50% 50% 50% / 60% 60% 40% 40%",
-              transform: `rotate(${Math.random() * 20 - 10}deg)`,
+              transform: `rotate(${balloon.rotation}deg)`,
             }}
           >
-            <div className="absolute bottom-0 left-1/2 w-0.5 h-12 bg-gray-400 -translate-x-1/2" />
+            {/* String */}
+            <div className="absolute bottom-0 left-1/2 w-[1px] h-16 bg-gray-500 -translate-x-1/2" />
+
+            {/* Tie */}
             <div
-              className="absolute bottom-0 left-1/2 w-3 h-3 rounded-full -translate-x-1/2 translate-y-1/2"
-              style={{ background: colors[(i + 2) % colors.length] }}
+              className="absolute bottom-0 left-1/2 w-2 h-2 rounded-full -translate-x-1/2 translate-y-1/2"
+              style={{ background: balloon.color2 }}
             />
           </div>
         </motion.div>

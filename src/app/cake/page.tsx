@@ -1,8 +1,8 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { Gift, PocketKnifeIcon as Knife } from "lucide-react"
 import Link from "next/link"
-import { Gift, PocketKnifeIcon as Knife } from 'lucide-react'
 import { useState } from "react"
 
 export default function Cake() {
@@ -10,9 +10,7 @@ export default function Cake() {
   const [isCutting, setIsCutting] = useState(false)
   const [isCakeCut, setIsCakeCut] = useState(false)
 
-  const blowOutCandles = () => {
-    setCandlesLit(false)
-  }
+  const blowOutCandles = () => setCandlesLit(false)
 
   const cutCake = () => {
     setIsCutting(true)
@@ -31,6 +29,8 @@ export default function Cake() {
         transition={{ duration: 0.8 }}
       >
         <h1 className="text-4xl font-bold text-white mb-16 drop-shadow-lg">Make a Wish!</h1>
+
+        {/* Cake Display */}
         <div className="cake mb-8 relative">
           <div className="plate"></div>
           <div className="layer layer-bottom"></div>
@@ -40,19 +40,19 @@ export default function Cake() {
           <div className="drip drip1"></div>
           <div className="drip drip2"></div>
           <div className="drip drip3"></div>
+
+          {/* Candles */}
           {candlesLit && (
-            <>
-              <div className="candle">
-                <div className="flame"></div>
-              </div>
-              <div className="candle">
-                <div className="flame"></div>
-              </div>
-              <div className="candle">
-                <div className="flame"></div>
-              </div>
-            </>
+            <div className="absolute top-[-20px] left-1/2 flex gap-4 -translate-x-1/2">
+              {[...Array(3)].map((_, i) => (
+                <div key={i} className="candle">
+                  <div className="flame"></div>
+                </div>
+              ))}
+            </div>
           )}
+
+          {/* Cutting Knife Animation */}
           {isCutting && (
             <motion.div
               className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
@@ -69,10 +69,14 @@ export default function Cake() {
               <Knife size={48} className="text-white" />
             </motion.div>
           )}
+
+          {/* Cake Cut Effect */}
           {isCakeCut && (
-            <div className="absolute top-1/2 left-1/2 w-full h-1 bg-white transform -translate-x-1/2 -translate-y-1/2 rotate-45"></div>
+            <div className="absolute top-1/2 left-1/2 w-5/6 h-1 bg-white transform -translate-x-1/2 -translate-y-1/2 rotate-12 shadow-md"></div>
           )}
         </div>
+
+        {/* Buttons */}
         {candlesLit ? (
           <button
             onClick={blowOutCandles}
@@ -91,6 +95,8 @@ export default function Cake() {
             {isCutting ? "Cutting..." : "Cut the Cake"}
           </button>
         )}
+
+        {/* Link to Birthday Message */}
         {isCakeCut && (
           <Link
             href="/wish"

@@ -10,19 +10,33 @@ const Confetti = dynamic(() => import("react-confetti"), { ssr: false })
 
 export default function Home() {
   const [windowSize, setWindowSize] = useState({ width: 0, height: 0 })
+  const [particles, setParticles] = useState<{ x: number; y: number }[]>([])
 
   useEffect(() => {
-    const handleResize = () => {
-      setWindowSize({ width: window.innerWidth, height: window.innerHeight })
+    if (typeof window !== "undefined") {
+      const handleResize = () => {
+        setWindowSize({ width: window.innerWidth, height: window.innerHeight })
+      }
+      handleResize()
+      window.addEventListener("resize", handleResize)
+      return () => window.removeEventListener("resize", handleResize)
     }
-    handleResize()
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
   }, [])
 
+  useEffect(() => {
+    if (windowSize.width > 0 && windowSize.height > 0) {
+      setParticles(
+        Array.from({ length: 20 }).map(() => ({
+          x: Math.random() * windowSize.width,
+          y: Math.random() * windowSize.height,
+        }))
+      )
+    }
+  }, [windowSize])
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 flex flex-col items-center justify-center p-4 overflow-x-hidden">
-      {typeof window !== "undefined" && (
+    <div className="min-h-screen bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 flex flex-col items-center justify-center p-4 overflow-x-hidden relative">
+      {windowSize.width > 0 && (
         <Confetti width={windowSize.width} height={windowSize.height} recycle={false} numberOfPieces={200} />
       )}
       <motion.div
@@ -47,7 +61,7 @@ export default function Home() {
           Open Your Gift <Gift className="ml-2" />
         </Link>
       </motion.div>
-      {[...Array(20)].map((_, i) => (
+      {particles.map((particle, i) => (
         <motion.div
           key={i}
           className="absolute w-4 h-4 bg-white rounded-full"
@@ -55,13 +69,12 @@ export default function Home() {
           animate={{
             opacity: [0, 1, 0],
             scale: [0, 1, 0],
-            x: Math.random() * windowSize.width,
-            y: Math.random() * windowSize.height,
+            x: particle.x,
+            y: particle.y,
           }}
-          transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, delay: i * 0.2 }}
+          transition={{ duration: 2, repeat: Infinity, delay: i * 0.2 }}
         />
       ))}
     </div>
   )
 }
-

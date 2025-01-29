@@ -9,11 +9,15 @@ import FinalCard from "@/components/FinalCard"
 
 export default function Wish() {
     useEffect(() => {
-        confetti({
-            particleCount: 100,
-            spread: 70,
-            origin: { y: 0.6 },
-        })
+        if (typeof window !== "undefined") {
+            setTimeout(() => {
+                confetti({
+                    particleCount: 100,
+                    spread: 70,
+                    origin: { y: 0.6 },
+                })
+            }, 300)
+        }
     }, [])
 
     return (
@@ -34,8 +38,7 @@ export default function Wish() {
                     transition={{ delay: 0.5, duration: 0.8 }}
                     className="text-lg mb-4"
                 >
-                    💖🎈 May your day be filled with love 💕, laughter 😄, and all the happiness in the world! ✨ you&apos;ve been my constant companion and
-                    confidante.
+                    💖🎈 May your day be filled with love, laughter, and all the happiness in the world! ✨ You've been my constant companion and confidante.
                 </motion.p>
                 <motion.p
                     initial={{ opacity: 0 }}
@@ -43,8 +46,7 @@ export default function Wish() {
                     transition={{ delay: 1, duration: 0.8 }}
                     className="text-lg mb-4"
                 >
-                    Your strength inspires me, your laughter lifts me, and your love supports me.💖🎈 I&apos;m so grateful to have you as
-                    my sister.
+                    Your strength inspires me, your laughter lifts me, and your love supports me. 💖🎈 I'm so grateful to have you as my sister.
                 </motion.p>
                 <motion.p
                     initial={{ opacity: 0 }}
@@ -52,12 +54,10 @@ export default function Wish() {
                     transition={{ delay: 1.5, duration: 0.8 }}
                     className="text-lg mb-4"
                 >
-                    On this special day, I wish you all the joy, success, and love that you so richly deserve.✨ May this year be
-                    your best one yet!
+                    On this special day, I wish you all the joy, success, and love that you so richly deserve. ✨ May this year be your best one yet!
                 </motion.p>
             </motion.div>
             <FinalCard />
         </div>
     )
 }
-
