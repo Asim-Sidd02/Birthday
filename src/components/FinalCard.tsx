@@ -49,12 +49,12 @@ export default function FinalCard() {
                     </p>
                     <p className="text-gray-800 mb-2">
                         Your strength in facing challenges, your infectious laughter that brightens the darkest days, and your
-                        unwavering love have been my constant inspiration. You've taught me so much about resilience, kindness, and
+                        unwavering love have been my constant inspiration. You&apos;ve taught me so much about resilience, kindness, and
                         the true meaning of sisterhood.
                     </p>
                     <p className="text-gray-800 mb-4">
                         On this special day, I wish you all the happiness, success, and love that you so richly deserve. May this
-                        year bring you exciting opportunities, beautiful moments, and dreams fulfilled. I'll be right here, cheering
+                        year bring you exciting opportunities, beautiful moments, and dreams fulfilled. I&apos;ll be right here, cheering
                         you on every step of the way.
                     </p>
                     <p className="text-gray-800 font-semibold">
