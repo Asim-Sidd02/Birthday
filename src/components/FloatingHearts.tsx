@@ -3,14 +3,6 @@
 import { motion } from "framer-motion"
 import { Heart } from "lucide-react"
 
-// Define types for floating hearts
-interface HeartProps {
-    x: number
-    y: number
-    size: number
-    duration: number
-}
-
 export default function FloatingHearts() {
     return (
         <div className="fixed inset-0 pointer-events-none">
