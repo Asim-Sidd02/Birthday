@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
-import { Cake, Camera } from "lucide-react"
+import { Cake, Camera, Image } from "lucide-react"
 import Balloons from "@/components/Balloons"
 
 export default function Welcome() {
@@ -25,6 +25,12 @@ export default function Welcome() {
                         className="bg-white text-purple-600 px-6 py-3 rounded-full font-semibold text-lg hover:bg-purple-100 transition duration-300 flex items-center shadow-lg"
                     >
                         Memory Lane <Camera className="ml-2" />
+                    </Link>
+                    <Link
+                        href="/gallery"
+                        className="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold text-lg hover:bg-blue-100 transition duration-300 flex items-center shadow-lg"
+                    >
+                        Photo Gallery <Image className="ml-2" />
                     </Link>
                     <Link
                         href="/cake"
