@@ -34,7 +34,7 @@ export default function Wish() {
                     transition={{ delay: 0.5, duration: 0.8 }}
                     className="text-lg mb-4"
                 >
-                    From our childhood adventures to our grown-up heart-to-hearts, you've been my constant companion and
+                    💖🎈 May your day be filled with love 💕, laughter 😄, and all the happiness in the world! ✨ you've been my constant companion and
                     confidante.
                 </motion.p>
                 <motion.p
@@ -43,7 +43,7 @@ export default function Wish() {
                     transition={{ delay: 1, duration: 0.8 }}
                     className="text-lg mb-4"
                 >
-                    Your strength inspires me, your laughter lifts me, and your love supports me. I'm so grateful to have you as
+                    Your strength inspires me, your laughter lifts me, and your love supports me.💖🎈 I'm so grateful to have you as
                     my sister.
                 </motion.p>
                 <motion.p
@@ -52,7 +52,7 @@ export default function Wish() {
                     transition={{ delay: 1.5, duration: 0.8 }}
                     className="text-lg mb-4"
                 >
-                    On this special day, I wish you all the joy, success, and love that you so richly deserve. May this year be
+                    On this special day, I wish you all the joy, success, and love that you so richly deserve.✨ May this year be
                     your best one yet!
                 </motion.p>
             </motion.div>

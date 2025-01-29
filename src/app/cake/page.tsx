@@ -30,7 +30,7 @@ export default function Cake() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h1 className="text-4xl font-bold text-white mb-4 drop-shadow-lg">Make a Wish!</h1>
+        <h1 className="text-4xl font-bold text-white mb-16 drop-shadow-lg">Make a Wish!</h1>
         <div className="cake mb-8 relative">
           <div className="plate"></div>
           <div className="layer layer-bottom"></div>

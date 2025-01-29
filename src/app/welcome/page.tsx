@@ -7,7 +7,7 @@ import Balloons from "@/components/Balloons"
 
 export default function Welcome() {
     return (
-        <div className="min-h-screen bg-gradient-to-br from-yellow-400 via-pink-500 to-purple-600 flex flex-col items-center justify-center p-4 overflow-hidden">
+        <div className="min-h-screen bg-gradient-to-br from-yellow-400 via-pink-500 to-purple-600 flex flex-col items-center justify-center p-4 overflow-x-hidden">
             <Balloons />
             <motion.div
                 className="z-10 text-center bg-white bg-opacity-20 backdrop-blur-lg rounded-xl p-8 shadow-2xl"

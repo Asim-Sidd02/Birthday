@@ -35,20 +35,17 @@ export default function FinalCard() {
                     transition={{ duration: 0.2 }}
                 >
                     <img
-                        src="/placeholder.svg?height=200&width=350&text=Sister+and+I"
-                        alt="Sister and I"
-                        className="w-full h-48 object-cover rounded-lg mb-4"
+                        src="/A8.png"
+                        alt="Sister"
+                        className="w-full object-cover rounded-lg mb-4"
                     />
-                    <h3 className="text-2xl font-bold text-purple-600 mb-4">Happy Birthday, Sis!</h3>
+                    <h3 className="text-2xl font-bold text-purple-600 mb-4">Happy Birthday, Sister!</h3>
                     <p className="text-gray-800 mb-2">My dearest sister,</p>
                     <p className="text-gray-800 mb-2">
-                        As I write this, I'm filled with an overwhelming sense of gratitude for having you in my life. You're not
-                        just my sister; you're my best friend, my confidante, and my partner in crime.
+                        As I sit down to write this, my heart is overflowing with gratitude for having you in my life. You are so much more than just my sister—you are my best friend, my confidante, and my partner in crime. 💖
                     </p>
                     <p className="text-gray-800 mb-2">
-                        Remember when we used to build pillow forts and dream of adventures? Well, look at us now – we're living
-                        those adventures, supporting each other through thick and thin, and creating memories that will last a
-                        lifetime.
+                        Well, here we are, living our own adventure—standing by each other through every high and low, creating memories that will last a lifetime.💖✨
                     </p>
                     <p className="text-gray-800 mb-2">
                         Your strength in facing challenges, your infectious laughter that brightens the darkest days, and your
@@ -61,8 +58,7 @@ export default function FinalCard() {
                         you on every step of the way.
                     </p>
                     <p className="text-gray-800 font-semibold">
-                        Happy Birthday, sis! Here's to another year of laughter, love, and unforgettable memories. I love you more
-                        than words can express. <Heart className="inline text-red-500" />
+                        Happy Birthday, sis! 🥳🎂 Here’s to another year of laughter, love, and unforgettable moments. I love you more than words can ever express. 💕 <Heart className="inline text-red-500" />
                     </p>
                 </motion.div>
             </motion.div>
