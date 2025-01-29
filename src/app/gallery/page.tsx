@@ -52,13 +52,19 @@ export default function Gallery() {
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className="mt-8"
+                className="mt-8 flex space-x-4"
             >
                 <Link
-                    href="/message"
+                    href="/journey"
                     className="bg-white text-purple-600 px-6 py-3 rounded-full font-semibold text-lg hover:bg-purple-100 transition duration-300 flex items-center"
                 >
-                    Read Your Special Message <Heart className="ml-2 text-pink-500" />
+                    Memory Lane <Heart className="ml-2 text-pink-500" />
+                </Link>
+                <Link
+                    href="/cake"
+                    className="bg-white text-pink-600 px-6 py-3 rounded-full font-semibold text-lg hover:bg-pink-100 transition duration-300 flex items-center"
+                >
+                    Birthday Cake <Heart className="ml-2 text-purple-500" />
                 </Link>
             </motion.div>
         </div>
