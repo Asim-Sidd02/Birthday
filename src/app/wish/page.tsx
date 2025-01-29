@@ -5,6 +5,7 @@ import { useEffect } from "react"
 import confetti from "canvas-confetti"
 import { Heart } from "lucide-react"
 import Balloons from "@/components/Balloons"
+import FinalCard from "@/components/FinalCard"
 
 export default function Wish() {
     useEffect(() => {
@@ -63,6 +64,7 @@ export default function Wish() {
                     Love you to the moon and back! 🌙✨
                 </motion.p>
             </motion.div>
+            <FinalCard />
         </div>
     )
 }
