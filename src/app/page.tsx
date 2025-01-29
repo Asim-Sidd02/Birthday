@@ -21,7 +21,7 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 flex flex-col items-center justify-center p-4 overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 flex flex-col items-center justify-center p-4 overflow-x-hidden">
       {typeof window !== "undefined" && (
         <Confetti width={windowSize.width} height={windowSize.height} recycle={false} numberOfPieces={200} />
       )}

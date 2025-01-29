@@ -5,7 +5,6 @@ import { useState } from "react"
 import { ChevronRight, ChevronLeft } from "lucide-react"
 import Link from "next/link"
 
-// Replace these with actual images and captions for your sister
 const memories = [
     { image: "/placeholder.svg?height=600&width=800&text=Sister+1", caption: "From our first steps together..." },
     { image: "/placeholder.svg?height=600&width=800&text=Sister+2", caption: "Through all our adventures..." },

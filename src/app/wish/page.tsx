@@ -23,7 +23,7 @@ export default function Wish() {
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-center max-w-2xl bg-white bg-opacity-20 backdrop-blur-lg rounded-xl p-8 shadow-2xl"
+                className="text-center max-w-2xl bg-white bg-opacity-20 backdrop-blur-lg rounded-xl p-8 shadow-2xl mb-8"
             >
                 <h1 className="text-4xl font-bold mb-6">
                     Happy Birthday, My Dearest Sister! <Heart className="inline-block text-red-500" />
@@ -54,14 +54,6 @@ export default function Wish() {
                 >
                     On this special day, I wish you all the joy, success, and love that you so richly deserve. May this year be
                     your best one yet!
-                </motion.p>
-                <motion.p
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 2, duration: 0.5 }}
-                    className="text-2xl font-bold mt-8"
-                >
-                    Love you to the moon and back! 🌙✨
                 </motion.p>
             </motion.div>
             <FinalCard />
