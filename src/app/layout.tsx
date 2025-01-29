@@ -1,7 +1,7 @@
+import Balloons from "@/components/Balloons"
 import "./globals.css"
 import { Inter } from "next/font/google"
 import type React from "react"
-import Balloons from "./components/Balloons"
 
 const inter = Inter({ subsets: ["latin"] })
 
