@@ -1,10 +1,10 @@
 "use client"
 
 import { motion } from "framer-motion"
-import Link from "next/link"
-import { Sparkles, Gift } from "lucide-react"
-import { useEffect, useState } from "react"
+import { Gift } from "lucide-react"
 import dynamic from "next/dynamic"
+import Link from "next/link"
+import { useEffect, useState } from "react"
 
 const Confetti = dynamic(() => import("react-confetti"), { ssr: false })
 
