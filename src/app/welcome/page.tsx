@@ -23,12 +23,6 @@ export default function Welcome() {
                 </p>
                 <div className="flex justify-center space-x-4">
                     <Link
-                        href="/journey"
-                        className="bg-white text-purple-600 px-6 py-3 rounded-full font-semibold text-lg hover:bg-purple-100 transition duration-300 flex items-center shadow-lg"
-                    >
-                        Memory Lane <Camera className="ml-2" />
-                    </Link>
-                    <Link
                         href="/cake"
                         className="bg-white text-pink-600 px-6 py-3 rounded-full font-semibold text-lg hover:bg-pink-100 transition duration-300 flex items-center shadow-lg"
                     >
