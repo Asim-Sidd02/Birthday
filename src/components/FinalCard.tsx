@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Heart } from "lucide-react"
+import Image from "next/image"
 
 export default function FinalCard() {
     const [isOpen, setIsOpen] = useState(false)
@@ -23,7 +24,6 @@ export default function FinalCard() {
                     animate={{ opacity: isOpen ? 0 : 1 }}
                     transition={{ duration: 0.2 }}
                 >
-                    <h2 className="text-3xl font-bold text-white mb-4">For My Dear Sister</h2>
                     <Heart className="text-white w-16 h-16 mb-4" />
                     <p className="text-xl text-white text-center">Click to open your special birthday message</p>
                 </motion.div>
@@ -34,31 +34,25 @@ export default function FinalCard() {
                     animate={{ opacity: isOpen ? 1 : 0 }}
                     transition={{ duration: 0.2 }}
                 >
-                    <img
-                        src="/A8.png"
-                        alt="Sister"
+                    <Image
+                        src="/A.webp"
+                        alt="Ayesha"
+                        width={1000}
+                        height={1000}
                         className="w-full object-cover rounded-lg mb-4"
                     />
-                    <h3 className="text-2xl font-bold text-purple-600 mb-4">Happy Birthday, Sister!</h3>
-                    <p className="text-gray-800 mb-2">My dearest sister,</p>
+                    <h3 className="text-2xl font-bold text-purple-600 mb-4">Happy Birthday Dear Ayesha!</h3>
                     <p className="text-gray-800 mb-2">
-                        As I sit down to write this, my heart is overflowing with gratitude for having you in my life. You are so much more than just my sister—you are my best friend, my confidante, and my partner in crime. 💖
+                        Wishing you a day filled with happiness, laughter, and all the good things life has to offer. ✨ May this year bring you success, joy, and moments that make your heart smile.
                     </p>
                     <p className="text-gray-800 mb-2">
-                        Well, here we are, living our own adventure—standing by each other through every high and low, creating memories that will last a lifetime.💖✨
-                    </p>
-                    <p className="text-gray-800 mb-2">
-                        Your strength in facing challenges, your infectious laughter that brightens the darkest days, and your
-                        unwavering love have been my constant inspiration. You&apos;ve taught me so much about resilience, kindness, and
-                        the true meaning of sisterhood.
+                        You deserve all the happiness in the world! Keep shining, keep smiling, and may every day ahead be as amazing as you are. 💖
                     </p>
                     <p className="text-gray-800 mb-4">
-                        On this special day, I wish you all the happiness, success, and love that you so richly deserve. May this
-                        year bring you exciting opportunities, beautiful moments, and dreams fulfilled. I&apos;ll be right here, cheering
-                        you on every step of the way.
+                        May this new year of your life be full of exciting opportunities, beautiful memories, and dreams coming true. Keep being your incredible self!
                     </p>
                     <p className="text-gray-800 font-semibold">
-                        Happy Birthday, sis! 🥳🎂 Here’s to another year of laughter, love, and unforgettable moments. I love you more than words can ever express. 💕 <Heart className="inline text-red-500" />
+                        Happy Birthday! 🥳🎂 Wishing you all the best today and always. Enjoy your special day to the fullest! 💕 <Heart className="inline text-red-500" />
                     </p>
                 </motion.div>
             </motion.div>
