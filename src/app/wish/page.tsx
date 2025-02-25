@@ -30,7 +30,7 @@ export default function Wish() {
                 className="text-center max-w-2xl bg-white bg-opacity-20 backdrop-blur-lg rounded-xl p-8 shadow-2xl mb-8"
             >
                 <h1 className="text-4xl font-bold mb-6">
-                    Happy Birthday, My Dearest Sister! <Heart className="inline-block text-red-500" />
+                    Happy Birthday! <Heart className="inline-block text-red-500" />
                 </h1>
                 <motion.p
                     initial={{ opacity: 0 }}
@@ -38,15 +38,7 @@ export default function Wish() {
                     transition={{ delay: 0.5, duration: 0.8 }}
                     className="text-lg mb-4"
                 >
-                    💖🎈 May your day be filled with love, laughter, and all the happiness in the world! ✨ You&apos;ve been my constant companion and confidante.
-                </motion.p>
-                <motion.p
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 1, duration: 0.8 }}
-                    className="text-lg mb-4"
-                >
-                    Your strength inspires me, your laughter lifts me, and your love supports me. 💖🎈 I&apos;m so grateful to have you as my sister.
+                    💖🎈 May your day be filled with love, laughter, and all the happiness in the world!✨ On this special day, I wish you all the joy, success, and love that you so richly deserve.
                 </motion.p>
                 <motion.p
                     initial={{ opacity: 0 }}
@@ -54,7 +46,7 @@ export default function Wish() {
                     transition={{ delay: 1.5, duration: 0.8 }}
                     className="text-lg mb-4"
                 >
-                    On this special day, I wish you all the joy, success, and love that you so richly deserve. ✨ May this year be your best one yet!
+                    May this year be your best one yet! Keep building, keep innovating, and may this year bring you exciting projects, endless creativity, and success in everything you develop! 🎉👩‍💻✨
                 </motion.p>
             </motion.div>
             <FinalCard />

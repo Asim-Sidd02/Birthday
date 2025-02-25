@@ -45,7 +45,7 @@ export default function Home() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h1 className="text-6xl font-bold text-white mb-4 drop-shadow-lg">Happy Birthday, Sis!</h1>
+        <h1 className="text-6xl font-bold text-white mb-4 drop-shadow-lg">Happy Birthday Ayesha!</h1>
         <p className="text-xl text-white mb-8 drop-shadow-md">A magical journey awaits you...</p>
       </motion.div>
       <motion.div
