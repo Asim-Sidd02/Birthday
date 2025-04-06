@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+
 "use client"
 
 import { useState } from "react"
@@ -35,24 +37,24 @@ export default function FinalCard() {
                     transition={{ duration: 0.2 }}
                 >
                     <Image
-                        src="/A.webp"
-                        alt="Ayesha"
+                        src="/A.png"
+                        alt="Abha"
                         width={1000}
                         height={1000}
                         className="w-full object-cover rounded-lg mb-4"
                     />
-                    <h3 className="text-2xl font-bold text-purple-600 mb-4">Happy Birthday Dear Ayesha!</h3>
+                    <h3 className="text-2xl font-bold text-purple-600 mb-4">Happiest Birthday Abha!!!</h3>
                     <p className="text-gray-800 mb-2">
                         Wishing you a day filled with happiness, laughter, and all the good things life has to offer. ✨ May this year bring you success, joy, and moments that make your heart smile.
                     </p>
                     <p className="text-gray-800 mb-2">
                         You deserve all the happiness in the world! Keep shining, keep smiling, and may every day ahead be as amazing as you are. 💖
                     </p>
-                    <p className="text-gray-800 mb-4">
-                        May this new year of your life be full of exciting opportunities, beautiful memories, and dreams coming true. Keep being your incredible self!
-                    </p>
+                   
                     <p className="text-gray-800 font-semibold">
-                        Happy Birthday! 🥳🎂 Wishing you all the best today and always. Enjoy your special day to the fullest! 💕 <Heart className="inline text-red-500" />
+                    Happy Birthday, bestie. Your vibe is unmatched, your presence is my favorite present, and no plan is still a perfect plan when its you.
+
+Now go enjoy doing nothing like the absolute legend you are.. Truly a revolutionary way to celebrate: ignoring the world, dodging the spotlight, and letting the day pass like it's just a normal day.🎂 💕 <Heart className="inline text-red-500" />
                     </p>
                 </motion.div>
             </motion.div>

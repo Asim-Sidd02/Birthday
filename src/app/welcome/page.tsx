@@ -1,6 +1,6 @@
 "use client"
 
-import Balloons from "@/components/Balloons"
+import Balloons from "../../components/Balloons"
 import { motion } from "framer-motion"
 import { Cake } from "lucide-react"
 import Link from "next/link"

@@ -1,16 +1,22 @@
 "use client"
 
+import { useState } from "react"
 import { motion } from "framer-motion"
 import { Gift, PocketKnifeIcon as Knife } from "lucide-react"
 import Link from "next/link"
-import { useState } from "react"
+import { useMusic } from "../../components/MusicContext"
 
 export default function Cake() {
   const [candlesLit, setCandlesLit] = useState(true)
   const [isCutting, setIsCutting] = useState(false)
   const [isCakeCut, setIsCakeCut] = useState(false)
 
-  const blowOutCandles = () => setCandlesLit(false)
+  const { playMusic } = useMusic()
+
+  const blowOutCandles = () => {
+    setCandlesLit(false)
+    playMusic() // 👈 plays globally
+  }
 
   const cutCake = () => {
     setIsCutting(true)
